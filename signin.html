@@ -1,0 +1,144 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>Login Page</title>
+  <link href="bs/css/bootstrap.min.css" />
+  <style>
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background-color: #fff;
+      padding-top: 50px;
+      padding-bottom: 20px;
+    }
+    .login-container {
+      background-color: #bf94d6;
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px 30px 30px 30px;
+      border-radius: 6px;
+    }
+    .login-logo {
+      width: 144px;
+      height: 144px;
+      background-color: #bf94d6;
+      border-radius: 50%;
+      margin: 0 auto 20px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .login-logo img {
+      width: 100px;
+      height: 90px;
+    }
+    h1.welcome-text {
+      font-weight: 600;
+      font-size: 18px;
+      color: #4a4a4a;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .form-control {
+      border-radius: 30px !important;
+      height: 42px;
+      font-size: 14px;
+      color: #4a4a4a;
+    }
+    .forgot-password {
+      color: #fff;
+      font-size: 12px;
+      text-align: center;
+      margin-bottom: 20px;
+      cursor: default;
+      user-select: none;
+    }
+    .btn-signin {
+      background-color: #e6a85c;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 16px;
+      color: #fff;
+      padding: 10px 0;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+    .btn-signin:hover,
+    .btn-signin:focus {
+      background-color: #d99e4f;
+      color: #fff;
+    }
+    .signup-text {
+      text-align: center;
+      font-size: 12px;
+      color: #4a4a4a;
+      margin-top: 20px;
+    }
+    .signup-text a {
+      color: #3ca9b1;
+      font-weight: normal;
+      text-decoration: none;
+    }
+    .signup-text a:hover,
+    .signup-text a:focus {
+      text-decoration: underline;
+    }
+    @media (max-width: 480px) {
+      .login-container {
+        margin: 0 15px;
+        padding: 15px 20px 25px 20px;
+      }
+      .login-logo {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 15px;
+      }
+      .login-logo img {
+        width: 60px;
+        height: 60px;
+      }
+      h1.welcome-text {
+        font-size: 16px;
+        margin-bottom: 15px;
+      }
+      .form-control {
+        height: 38px;
+        font-size: 13px;
+      }
+      .forgot-password {
+        font-size: 11px;
+        margin-bottom: 15px;
+      }
+      .btn-signin {
+        font-size: 14px;
+        padding: 9px 0;
+      }
+      .signup-text {
+        font-size: 11px;
+        margin-top: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="login-logo">
+    <img alt="Abstract purple and orange geometric logo inside a purple circle" src="logo.png" />
+  </div>
+  <h1 class="welcome-text">Welcome Back!</h1>
+  <div class="login-container">
+    <form>
+      <input type="email" class="form-control" placeholder="Enter your email" required />
+      <input type="password" class="form-control" placeholder="Enter password" required style="margin-top: 15px;" />
+      <div class="forgot-password">Forgot Password</div>
+      <button type="submit" class="btn btn-signin"><a href="./dashboard.html">Sign In</a></button>
+    </form>
+  </div>
+  <p class="signup-text">
+    Don’t have an account ? <a href="./signup.html">Sign Up</a>
+  </p>
+
+  <script src="bs/jquery.js"></script>
+  <script src="bs/js/bootstrap.min.js"></script>
+</body>
+</html>

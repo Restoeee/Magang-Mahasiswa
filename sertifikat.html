@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cetak Sertifikat</title>
+  <link rel="stylesheet" href="bs/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      background-color: #fff;
+    }
+
+    .header {
+      background-color: #C18AD2;
+      padding: 90px 15px 60px;
+      text-align: center;
+      position: relative;
+    }
+
+    .header img.logo {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      width: 90px;
+    }
+
+    .header img.profile {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 90px;
+    }
+
+    .upload-icon {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .header h2 {
+      font-weight: bold;
+      font-size: 22px;
+      margin: 0;
+    }
+
+    .certificate {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 20px;
+      width: 85%;
+      margin: 30px auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    .certificate img.cert-logo {
+      width: 80px;
+      margin-bottom: 10px;
+    }
+
+    .certificate h3 {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .certificate p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+
+    .certificate .name {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .certificate .company {
+      font-weight: bold;
+    }
+
+    .certificate .score {
+      font-size: 28px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .certificate .footer {
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .certificate .signature {
+      font-style: italic;
+      margin: 10px 0;
+    }
+
+    .print-link {
+      display: block;
+      text-align: center;
+      margin: 20px;
+      color: #31A8AC;
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    @media print {
+      .header, .print-link {
+        display: none;
+      }
+      .certificate {
+        width: 100%;
+        border: none;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <img src="logo.png" class="logo" alt="Logo">
+    <img src="profile.png" class="profile" alt="Profile">
+    <div class="upload-icon">
+      <span class="glyphicon glyphicon-upload"></span>
+    </div>
+    <h2>CETAK SERTIFIKAT</h2>
+  </div>
+
+  <div class="certificate">
+    <img src="logo.png" alt="Logo" class="cert-logo">
+    <h3>Sertifikat Magang</h3>
+    <p>Diberikan kepada</p>
+    <div class="name">Budi Santoso</div>
+    <p><em>Yang telah melaksanakan magang</em></p>
+    <p>di <span class="company">PT Sentosa Indah</span></p>
+    <p>dengan Nilai</p>
+    <div class="score">85</div>
+    <div class="footer">
+      <p>Yogyakarta, 20 April 2024</p>
+      <p>Direktur</p>
+      <div class="signature">
+  <img src="ttd.jpeg" alt="Tanda Tangan" style="height:60px;">
+</div>
+      <p><b>Anton Wijaya</b></p>
+    </div>
+  </div>
+
+  <a class="print-link" onclick="window.print(); return false;">Cetak</a>
+
+</body>
+</html>

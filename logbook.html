@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Log Book Harian</title>
+  <link rel="stylesheet" href="bs/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+    }
+
+    .header {
+      background-color: #C18AD2;
+      padding: 100px 15px 60px;
+      text-align: center;
+      color: #2c2c2c;
+      position: relative;
+    }
+
+    .header img.logo {
+      position: absolute;
+      left: 15px;
+      top: 15px;
+      width: 90px;
+    }
+
+    .header img.profile {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      width: 90px;
+    }
+
+    .header .icon {
+      font-size: 50px;
+      margin-bottom: 10px;
+    }
+
+    .header h2 {
+      font-weight: bold;
+      font-size: 22px;
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    .logbook-title {
+      background-color: #e2e2e2;
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    th, td {
+      border: 1px solid #e2e2e2;
+      padding: 8px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    th {
+      background-color: #f5f5f5;
+      font-weight: bold;
+    }
+
+    .upload-btn {
+      background-color: #e2e2e2;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      font-size: 12px;
+      display: inline-block;
+    }
+
+    .upload-btn:hover {
+      background-color: #d3d3d3;
+    }
+
+    .glyphicon-upload {
+      font-size: 14px;
+    }
+
+    .action-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .add-row-btn {
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .header h2 {
+        font-size: 18px;
+      }
+
+      th, td {
+        font-size: 12px;
+        padding: 6px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <img src="logo.png" class="logo" alt="Logo">
+  <img src="profile.png" class="profile" alt="Profile">
+  <div class="icon"><i class="glyphicon glyphicon-book"></i></div>
+  <h2>LOG BOOK<br>HARIAN</h2>
+</div>
+
+<div class="container">
+  <div class="logbook-title">LOG BOOK HARIAN</div>
+  <table id="logbook-table">
+    <thead>
+      <tr>
+        <th>Tanggal</th>
+        <th>Kegiatan</th>
+        <th>Hasil</th>
+        <th>Bukti</th>
+        <th>Aksi</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="date" class="form-control" readonly></td>
+        <td><input type="text" class="form-control" placeholder="Kegiatan" readonly></td>
+        <td><input type="text" class="form-control" placeholder="Hasil" readonly></td>
+        <td style="text-align: center;">
+          <button class="upload-btn">
+            <i class="glyphicon glyphicon-upload"></i> Upload file
+          </button>
+        </td>
+        <td>
+          <div class="action-buttons">
+            <button class="btn btn-warning btn-xs edit-btn">Edit</button>
+            <button class="btn btn-success btn-xs save-btn">Simpan</button>
+            <button class="btn btn-danger btn-xs delete-btn">Hapus</button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button class="btn btn-primary add-row-btn">Tambah Baris Baru</button>
+</div>
+
+<script src="bs/jquery.js"></script>
+<script src="bs/js/bootstrap.min.js"></script>
+
+<script>
+  function bindRowEvents($row) {
+    // Upload
+    var $uploadBtn = $row.find('.upload-btn');
+    var $fileInput = $('<input type="file" style="display:none;">');
+    $('body').append($fileInput);
+
+    $uploadBtn.on('click', function () {
+      $fileInput.click();
+    });
+
+    $fileInput.on('change', function () {
+      if (this.files.length > 0) {
+        alert('File dipilih: ' + this.files[0].name);
+      }
+    });
+
+    // Edit
+    $row.find('.edit-btn').on('click', function () {
+      $row.find('input').removeAttr('readonly').first().focus();
+    });
+
+    // Simpan
+    $row.find('.save-btn').on('click', function () {
+      $row.find('input').attr('readonly', true);
+      var tanggal = $row.find('input[type="date"]').val();
+      var kegiatan = $row.find('input[placeholder="Kegiatan"]').val();
+      var hasil = $row.find('input[placeholder="Hasil"]').val();
+      console.log("Data disimpan:", { tanggal, kegiatan, hasil });
+      alert("Data berhasil disimpan!");
+    });
+
+    // Hapus
+    $row.find('.delete-btn').on('click', function () {
+      if (confirm("Yakin ingin menghapus baris ini?")) {
+        $row.remove();
+      }
+    });
+  }
+
+  // Bind existing rows
+  $('#logbook-table tbody tr').each(function () {
+    bindRowEvents($(this));
+  });
+
+  // Tambah Baris Baru
+  $('.add-row-btn').on('click', function () {
+    var $newRow = $(`
+      <tr>
+        <td><input type="date" class="form-control" readonly></td>
+        <td><input type="text" class="form-control" placeholder="Kegiatan" readonly></td>
+        <td><input type="text" class="form-control" placeholder="Hasil" readonly></td>
+        <td style="text-align: center;">
+          <button class="upload-btn">
+            <i class="glyphicon glyphicon-upload"></i> Upload file
+          </button>
+        </td>
+        <td>
+          <div class="action-buttons">
+            <button class="btn btn-warning btn-xs edit-btn">Edit</button>
+            <button class="btn btn-success btn-xs save-btn">Simpan</button>
+            <button class="btn btn-danger btn-xs delete-btn">Hapus</button>
+          </div>
+        </td>
+      </tr>
+    `);
+    $('#logbook-table tbody').append($newRow);
+    bindRowEvents($newRow);
+  });
+</script>
+
+</body>
+</html>

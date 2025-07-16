@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nilai dari Perusahaan</title>
+  <link rel="stylesheet" href="bs/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      background-color: #C18AD2;
+      padding: 100px 15px 60px;
+      text-align: center;
+      position: relative;
+    }
+
+    .header img.logo {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      width: 90px;
+    }
+
+    .header img.profile {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 90px;
+    }
+
+    .header .icon {
+      font-size: 50px;
+      margin-bottom: 10px;
+    }
+
+    .header h2 {
+      font-weight: bold;
+      font-size: 22px;
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    .section-title {
+      margin: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .progress-card {
+      background-color: #c38b1c;
+      color: #2b1c01;
+      margin: 15px 20px;
+      padding: 15px 20px;
+      border-radius: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .circle {
+      position: relative;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #F4D35E;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 16px;
+      color: #5b2a00;
+    }
+
+    .circle::before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      right: 5px;
+      bottom: 5px;
+      border-radius: 50%;
+      border: 5px solid #C18AD2;
+    }
+
+    .card-text {
+      flex-grow: 1;
+      margin-left: 20px;
+    }
+
+    .card-text b {
+      font-size: 16px;
+    }
+
+    .card-text small {
+      font-size: 12px;
+      color: #f8f0e5;
+    }
+
+    .arrow {
+      font-size: 18px;
+      font-weight: bold;
+      color: #000;
+    }
+
+    @media (max-width: 600px) {
+      .card-text b {
+        font-size: 14px;
+      }
+
+      .circle {
+        width: 50px;
+        height: 50px;
+      }
+
+      .progress-card {
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <img src="logo.png" class="logo" alt="Logo">
+    <img src="profile.png" class="profile" alt="Profile">
+    <div class="icon"><i class="glyphicon glyphicon-blackboard"></i></div>
+    <h2>NILAI DARI<br>PERUSAHAAN</h2>
+  </div>
+
+  <div class="section-title">Weekly Progress</div>
+
+  <div class="progress-card">
+    <div class="circle">50%</div>
+    <div class="card-text">
+      <b>Study</b><br>
+      <small>last week</small>
+    </div>
+    <div class="arrow">&rsaquo;</div>
+  </div>
+
+  <div class="progress-card">
+    <div class="circle">67</div>
+    <div class="card-text">
+      <b>Competent</b><br>
+      <small>last week</small>
+    </div>
+    <div class="arrow">&rsaquo;</div>
+  </div>
+
+  <div class="progress-card">
+    <div class="circle">27</div>
+    <div class="card-text">
+      <b>Competent</b><br>
+      <small>last week</small>
+    </div>
+    <div class="arrow">&rsaquo;</div>
+  </div>
+
+</body>
+</html>

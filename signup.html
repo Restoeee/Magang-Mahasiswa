@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrasi - Aplikasi Magang</title>
+    <Style>
+   :root {
+            --primary-bg: #E8DAEF;
+            --primary-purple: #C39BD3;
+            --text-dark: #333;
+            --accent-gold: #D3A95C;
+            --white: #ffffff;
+            --link-blue: #32C8CC;
+            --status-diterima: #58D68D;
+            --status-menunggu: #F5B041;
+            --status-ditolak: #EC7063;
+        }
+
+        html, body, .tab-content, .tab-pane {
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .page-container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            background-color: var(--white);
+        }
+
+        .app-header {
+            background-color: var(--primary-purple);
+            padding: 1rem 0;
+            flex-shrink: 0;
+        }
+        .app-header .logo-img { height: 40px; }
+        .app-header .profile-icon { font-size: 2.2rem; color: #ededed; }
+
+        .header-title-section {
+            background-color: var(--primary-purple);
+            padding: 1.5rem 1rem 5rem 1rem;
+            text-align: center;
+            flex-shrink: 0;
+        }
+        .header-title-section i { font-size: 3rem; margin-bottom: 0.5rem; }
+        .header-title-section h1 { font-size: 2.2rem; font-weight: 700; }
+        
+        .page-content {
+            flex-grow: 1;
+            background-color: var(--white);
+            border-top-left-radius: 2rem;
+            border-top-right-radius: 2rem;
+            margin-top: -3.5rem;
+            position: relative; z-index: 10;
+            padding: 2rem 0;
+            overflow-y: auto;
+        }
+        .page-content::-webkit-scrollbar { display: none; }
+
+        .auth-page-wrapper {
+            display: flex; align-items: center; justify-content: center;
+            height: 100%; position: relative; overflow: hidden;
+        }
+        .form-auth { text-align: center; width:100%; max-width: 400px; padding: 2rem; }
+        .form-auth h2, .form-auth h3 { font-weight: 700; }
+        .form-auth .btn { border: none; color: white; padding: 0.9rem; font-weight: 700; width: 100%; }
+        
+        #page-signup .auth-page-wrapper { background-color: var(--primary-bg); }
+        #page-signup .form-auth-content { z-index: 5; }
+        #page-signup .form-control { border-radius: 50rem; margin-bottom: 1rem; border: none; }
+        #page-signup .btn { background-color: var(--accent-gold); border-radius: 50rem; }
+        .auth-circle { position: absolute; border-radius: 50%; background-color: var(--primary-purple); opacity: 0.5; z-index: 1; }
+    </Style>
+</head>
+<body>
+    <div class="tab-panel" id="page-signup" role="tabpanel">
+            <div class="auth-page-wrapper">
+                <div class="auth-circle d-none d-md-block" style="width: 25vw; height: 25vw; top: -5vw; left: -10vw;"></div>
+                <div class="auth-circle d-none d-md-block" style="width: 30vw; height: 30vw; bottom: -10vw; right: -15vw;"></div>
+                <div class="form-auth-content m-3">
+                     <div style="background:none; position:absolute; top:1rem; right:1rem;"><img src="logo.png" alt="Logo" style="height:40px;"></div>
+                     <div class="form-auth" style="background: none; box-shadow: none;">
+                        <h3>Welcome YokMa!</h3><p class="text-muted">Mulai Kariermu Bersama YokMa</p>
+                        <div class="mt-4">
+                            <input type="text" class="form-control" placeholder="Enter your full name" style="background-color: var(--white);">
+                            <input type="email" class="form-control" placeholder="Enter your email" style="background-color: var(--white);">
+                            <input type="password" class="form-control" placeholder="Enter password" style="background-color: var(--white);">
+                            <input type="password" class="form-control" placeholder="Confirm Password" style="background-color: var(--white);">
+                            <a class="btn mt-3" data-bs-toggle="tab" href="./dashboard.html" role="tab" style="background-color: var(--accent-gold);">Register</a>
+                            <p class="mt-4" style="font-size:0.9rem;">Already have an account? <a data-bs-toggle="tab" href="./signin.html" role="tab" class="link">Sign In</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  <script src="bs/jquery.js"></script>
+  <script src="bs/js/bootstrap.min.js"></script>
+</body>
+</html>

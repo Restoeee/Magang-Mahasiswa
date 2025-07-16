@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard Magang Mahasiswa</title>
+  <link rel="stylesheet" href="bs/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+    }
+
+    .header {
+      background-color: #C18AD2;
+      padding: 250px 15px 40px;
+      text-align: center;
+      color: #2c2c2c;
+      position: relative;
+    }
+
+    .header img.logo {
+      position: absolute;
+      left: 15px;
+      top: 15px;
+      width: 90px;
+    }
+
+    .header img.profile {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      width: 90px;
+    }
+
+    .header-content h1 {
+      font-weight: bold;
+      font-size: 24px;
+      margin-top: -50px;
+      margin-bottom: 10px;
+    }
+
+    .header-content h4 {
+      font-size: 14px;
+      letter-spacing: 1px;
+      margin: 0;
+    }
+
+    .menu {
+      padding: 30px 15px;
+    }
+
+    .menu .item {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .menu .item .icon {
+      background-color: #C18AD2;
+      border-radius: 50%;
+      width: 90px;
+      height: 90px;
+      margin: 0 auto 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .menu .item .icon i {
+      font-size: 30px;
+      color: #000;
+    }
+
+    .menu .item p {
+      margin: 0;
+      font-weight: bold;
+      font-size: 12px;
+    }
+
+    @media (min-width: 768px) {
+      .menu .row > div {
+        margin-bottom: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <img src="logo.png" class="logo" alt="Logo">
+    <img src="profile.png" class="profile" alt="Profile">
+    <div class="header-content">
+      <h1>SELAMAT DATANG</h1>
+      <h4>DASHBOARD <br>MAGANG MAHASISWA</h4>
+    </div>
+  </div>
+
+  <div class="container menu">
+    <div class="row">
+      <a href="./pendaftaran.html">
+        <div class="col-xs-4 item">
+        <div class="icon"><i class="glyphicon glyphicon-list-alt"></i></div>
+        <p>PENDAFTARAN<br>MAGANG</p>
+      </div>
+      </a>
+      <a href="./approval.html">
+        <div class="col-xs-4 item">
+        <div class="icon"><i class="glyphicon glyphicon-check"></i></div>
+        <p>APPROVAL<br>PRODI</p>
+      </div>
+      </a>
+      <a href="bimbingan.html">
+        <div class="col-xs-4 item">
+        <div class="icon"><i class="glyphicon glyphicon-user"></i></div>
+        <p>AKSES<br>BIMBINGAN</p>
+      </div>
+      </a>
+      <a href="logbook.html">
+        <div class="col-xs-4 item">
+        <div class="icon"><i class="glyphicon glyphicon-book"></i></div>
+        <p>LOG BOOK<br>HARIAN</p>
+      </div>
+      </a>
+      <a href="sertifikat.html">
+        <div class="col-xs-4 item">
+        <div class="icon"><i class="glyphicon glyphicon-upload"></i></div>
+        <p>CETAK<br>SERTIFIKAT</p>
+      </div>
+      </a>
+      <a href="nilai.html">
+        <div class="col-xs-4 item">
+        <div class="icon"><i class="glyphicon glyphicon-blackboard"></i></div>
+        <p>NILAI DARI<br>PERUSAHAAN</p>
+      </div>
+      </a>
+    </div>
+  </div>
+
+  <script src="bs/jquery.js"></script>
+  <script src="bs/js/bootstrap.min.js"></script>
+</body>
+</html>
