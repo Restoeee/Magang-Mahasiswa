@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nilai Perusahaan</title>
+  <link rel="stylesheet" href="bs/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+    }
+
+    .header {
+      background-color: #d49ae3;
+      padding: 20px 0;
+      text-align: center;
+      color: #000;
+      position: relative;
+    }
+
+    .header .icon-left {
+      position: absolute;
+      left: 20px;
+      top: 15px;
+      width: 85px;
+    }
+
+    .header .icon-right {
+      position: absolute;
+      right: 20px;
+      top: 15px;
+      width: 85px;
+    }
+
+    .header h1 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .content {
+      padding: 30px 20px;
+    }
+
+    .stars {
+      font-size: 24px;
+      color: gold;
+    }
+
+    .feedback-box {
+      width: 100%;
+      min-height: 120px;
+      resize: none;
+      padding: 10px;
+      background-color: #eac9f1;
+      border: none;
+      margin-top: 10px;
+      border-radius: 4px;
+    }
+
+    .btn-submit {
+      background: linear-gradient(to right, #9d4edd, #c77dff);
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      margin-top: 20px;
+      border-radius: 12px;
+      box-shadow: 2px 4px 6px rgba(0,0,0,0.2);
+    }
+
+    .btn-submit:hover {
+      background: #a46bdb;
+    }
+
+    @media (min-width: 768px) {
+      .content {
+        width: 60%;
+        margin: 0 auto;
+      }
+
+      .header h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <img src="logo.png" class="icon-left" alt="Logo">
+    <img src="profile.png" class="icon-right" alt="User Icon">
+      <div class="icon">
+      <i class="glyphicon glyphicon-star-empty"></i>
+    </div>
+    <h1>NILAI<br>PERUSAHAAN</h1>
+  </div>
+
+  <div class="content">
+    <h4><strong>DataNest Analytic</strong></h4>
+    <div class="stars">
+      ★ ★ ★ ★ ☆
+    </div>
+
+    <h4 style="margin-top: 30px;"><strong>Feedback</strong></h4>
+    <textarea class="feedback-box" placeholder="Write it here"></textarea>
+
+    <br>
+    <button class="btn btn-submit">Submit</button>
+  </div>
+
+  <script src="bs/jquery.js"></script>
+  <script src="bs/js/bootstrap.min.js"></script>
+</body>
+</html>
